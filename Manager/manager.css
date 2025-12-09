@@ -1,0 +1,255 @@
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #2e1d13;
+    color: #f8e7d0;
+    background-image: url('wood-texture.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffcc80;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 40px;
+}
+
+
+.manager-controls {
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.manager-controls h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffcc80;
+}
+
+.manager-controls input,
+.manager-controls select,
+.manager-controls button {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1em;
+}
+
+.manager-controls input,
+.manager-controls select {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+}
+
+.manager-controls button {
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.manager-controls button:hover {
+    background-color: darkred;
+}
+
+
+.menu-preview {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu-section {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+menu-section .menu-item {
+    width: 100%;
+}
+
+.menu-section h3 {
+    color: #ffcc80;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px #000;
+}
+
+
+.menu-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.menu-item img.menu-pic {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    border: 2px solid #ffcc80;
+}
+
+.item-details h3 {
+    margin: 0 0 5px 0;
+    color: #ffd699;
+}
+
+.item-details .item-price {
+    font-weight: bold;
+    color: #ffcc80;
+}
+
+.item-details .item-desc {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.delete-btn {
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+
+@media (max-width: 900px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item img.menu-pic {
+        margin-bottom: 10px;
+    }
+}
+.main-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.2);
+}
+
+
+
+.logo img{
+    height: 80px;
+}
+
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+.main-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover{
+    color: red;
+}
+
+.main-nav ul li a.active{
+    color: red;
+}
+
+.order-button .btn{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.order-button .btn:hover {
+    background-color: darkred;
+}
+
+.order-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-icon-link {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 1.6em;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+
+.cart-icon-link:hover {
+font-size: 1.5em;
+line-height: 1;
+
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    min-width: 15px;
+    text-align: center;
+    border: 1px solid black;
+    line-height: 1;
+}

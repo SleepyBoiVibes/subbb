@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    </head>
+<body>
+    <header class="main-header">
+
+        <div class="logo">
+            <img src="IMAGE/Logo.jpg" alt="Logo">
+        </div>
+
+    <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="Menu.html">MENU</a></li>
+                <li><a href="/Reviews/reviews.html">REVIEWS</a></li>
+                <li><a id="nav-login" href="Login-SignUp/login-signUp.html">LOGIN/SIGNUP</a></li>
+                <li><a href="/Manager/manager.html">MANAGER</a></li>
+            </ul>
+        </nav>
+
+        <div class="order-actions"> 
+    
+    <a href="cart.html" class="cart-icon-link active">
+        <span class="cart-count">0</span> <span class="cart-icon">🛍️</span>
+    </a>
+    
+    <div class="order-button">
+        <a href="cart.html" class="btn">ORDER NOW</a>
+    </div>
+</div>
+    </header>
+
+<main class="cart-container">
+
+    <div id="cart-view" class="cart-view-container">
+
+        <h1 class="cart-heading">Your Cart (<span id="item-count-display">0</span> items)</h1>
+
+        <div class="cart-wrapper">
+            <table class="cart-table">
+                <thead>
+                    <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-item-list">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="subtotal-display">$0.00</span>
+            </div>
+
+            <div class="summary-line">
+                <span>Sales Tax:</span>
+                <span id="tax-display">$0.00</span>
+            </div>
+
+            <div class="summary-line coupon-input-line">
+                <span>Coupon Code:</span>
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <input type="text" id="coupon-input" placeholder="Enter code">
+                    <button id="apply-coupon-btn">Apply</button>
+                </div>
+            </div>
+
+            <div class="summary-line discount-line" id="discount-line" style="display: none;">
+                <span id="discount-label">Coupon Discount:</span>
+                <span id="discount-display">-$0.00</span>
+            </div>
+
+            <div class="tip-section">
+                <h4 class="tip-heading">Add a Tip:</h4>
+                
+                <input type="number" id="custom-tip-input" placeholder="Enter Amount" min="0" step="0.01">
+
+                <div class="summary-line tip-amount-line">
+                    <span>Tip Amount:</span>
+                    <span id="tip-display">$0.00</span>
+                </div>
+            </div>
+            <div class="summary-line grand-total-line">
+                <span>Grand total:</span>
+                <span id="grandtotal-display">$0.00</span>
+            </div>
+
+            <button class="checkout-btn">Check Out</button>
+        </div>
+    </div>
+    </main>
+
+ 
+          <div id="receipt-view" class="receipt-container-full">
+        <div class="receipt-card">
+            <h1 class="confirmation-heading">✅ Order Confirmed!</h1>
+            <p class="order-time">Your order will be ready in approximately 20-25 minutes.</p>
+            <p class="order-id">Order ID: **#<span id="order-id">000000</span>**</p>
+            
+            <hr>
+
+            <h2>Order Summary</h2>
+            <div id="receipt-items-list" class="receipt-items">
+                </div>
+            
+            <hr>
+
+            <div class="receipt-totals">
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="receipt-subtotal">$0.00</span>
+                </div>
+
+                <div class="summary-line" id="receipt-discount-line" style="display: none;">
+                    <span id="receipt-discount-label">Coupon Discount:</span>
+                    <span id="receipt-discount-display">-$0.00</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Sales Tax:</span>
+                    <span id="receipt-tax">$0.00</span>
+                </div>
+                <div class="summary-line tip-line">
+                    <span>Tip:</span>
+                    <span id="receipt-tip">$0.00</span>
+                </div>
+                <div class="summary-line grand-total-line">
+                    <span>Total Charged:</span>
+                    <span id="receipt-grandtotal">$0.00</span>
+                </div>
+            </div>
+            
+            <button class="print-btn" onclick="window.print()">Print Receipt</button>
+            <a href="Menu.html" class="new-order-link">Start a New Order</a>
+        </div>
+    </div>
+
+
+ <footer>
+      <p>© 2025 Lonestar Bites. All Rights Reserved.</p>
+  </footer>
+
+   <script src="cart.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>

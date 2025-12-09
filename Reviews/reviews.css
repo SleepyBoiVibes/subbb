@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #2e1d13;
+    color: #f8e7d0;
+    background-image: url('wood-texture.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.reviews {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.reviews h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    color: #ffcc80;
+    text-shadow: 2px 2px 5px #000;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 60px;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-mark {
+    font-size: 60px;
+    color: #ffcc80;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.reviewer {
+    font-size: 20px;
+    font-style: italic;
+    color: #ffd699;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.images img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffcc80;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+.main-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0, 0.2);
+}
+
+
+
+.logo img{
+    height: 80px;
+}
+
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+.main-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav ul li a {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover{
+    color: red;
+}
+
+.main-nav ul li a.active{
+    color: red;
+}
+
+.order-button .btn{
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.order-button .btn:hover {
+    background-color: darkred;
+}
+
+
+.order-action {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-icon-link {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    font-size: 1.6em;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+
+.cart-icon-link:hover {
+font-size: 1.5em;
+line-height: 1;
+
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+    min-width: 15px;
+    text-align: center;
+    border: 1px solid black;
+    line-height: 1;
+}
+
+
+@media (max-width: 900px) {
+    .main-nav ul {
+        gap: 15px; 
+    }
+    .main-nav ul li a {
+        font-size: 1em;
+    }
+    .main-header {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-wrap: wrap; 
+        justify-content: center; 
+        text-align: center;
+    }
+    .main-nav {
+        flex-basis: 100%; 
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .main-nav ul {
+        justify-content: center;
+        gap: 10px;
+    }
+    .logo, .order-button {
+        margin: 10px;
+    }
+}
+footer {
+    background-color: #2b1d0e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+
+}
