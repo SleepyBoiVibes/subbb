@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     let menuData = JSON.parse(localStorage.getItem("menuData")) || {
-        "burgers-content": [ { name: "Kincaid’s Hamburgers", price: 7.65, desc: "A basic but a classic!!", img: "IMAGE/cheeseburger.png" },
-        { name: "Brisket Burger", price: 11.99, desc: "Smoked brisket burger with American cheese on a brioche bun.", img: "/IMAGE/brisket_burger.png" },
+        "burgers-content": [ { name: "Kincaid’s Hamburgers", price: 7.65, desc: "A basic but a classic!!", img: "./IMAGE/cheeseburger.png" },
+        { name: "Brisket Burger", price: 11.99, desc: "Smoked brisket burger with American cheese on a brioche bun.", img: "./IMAGE/brisket_burger.png" },
         { name: "Jabs Smash Burgers", price: 12.99, desc: "Try out our newest addition to the menu, with bacon and onions over smashed beef.", img: "/IMAGE/smashburger3.jpg" },
-        { name: "Texas Burger", price: 13.99, desc: "Stacked with cheddar, bacon, and a smoky BBQ", img: "/IMAGE/bacon-burger.jpg" }],
+        { name: "Texas Burger", price: 13.99, desc: "Stacked with cheddar, bacon, and a smoky BBQ", img: "./IMAGE/bacon-burger.jpg" }],
 
-        "appetizers-content": [{ name: "Grilled Shrimp Appetizer", price: 8.49, desc: "Seafood lovers will love this!", img: "/IMAGE/Grilledshrimp2.jpg" },
+        "appetizers-content": [{ name: "Grilled Shrimp Appetizer", price: 8.49, desc: "Seafood lovers will love this!", img: "./IMAGE/Grilledshrimp2.jpg" },
         { name: "Tater Skins", price: 7.99, desc: "A favorite of the south, great for sharing!", img: "IMAGE/potatoskins.jpg" },
         { name: "Boneless Buffalo Wings", price: 7.99, desc: "This appetizer allows you to pick between mild or hot sauces, and we opted for hot.", img: "IMAGE/buffalowings.jpg" },
         { name: "Chili Cheese Fries", price: 5.99, desc: "Crinkle-cut fries topped with melted cheddar cheese and bacon bits.", img: "IMAGE/chilicheesefries.jpg" }],
