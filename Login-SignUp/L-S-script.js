@@ -78,7 +78,7 @@ function userLoggedIn(user){
     setTimeout(() => {
         window.location.href = user.email.toLowerCase() === "manager@lonestar.com"
             ? '../Manager/manager.html'
-            : '../account/account.html';
+            : '../Account/account.html';
     }, 1000);
 }
 
@@ -90,7 +90,7 @@ window.addEventListener('load', () => {
     if(loggedInUser && isLoginPage){
         window.location.href = loggedInUser.email.toLowerCase() === "manager@lonestar.com"
             ? '../Manager/manager.html'
-            : '../account/account.html';
+            : '../Account/account.html';
     }
 
     // Default to sign-up view

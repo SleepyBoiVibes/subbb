@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if(navLogin){
         if(loggedInUser){
             navLogin.textContent = "ACCOUNT";
-            navLogin.href = "../account/account.html";
+            navLogin.href = "/Final-Project/Account/account.html";
         } else {
             navLogin.textContent = "LOGIN / SIGNUP";
-            navLogin.href = "../Login-SignUp/login-signUp.html";
+            navLogin.href = "/Final-Project/Login-SignUp/login-signUp.html";
         }
     }
 
@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if(loggedInUser && window.location.pathname.toLowerCase().includes("login-signup.html")){
-        window.location.href = loggedInUser.email.toLowerCase() === "manager@lonestar.com" ? '../Manager/manager.html' : '../account/account.html';
+        window.location.href = loggedInUser.email.toLowerCase() === "manager@lonestar.com" ? '../Manager/manager.html' : '../Account/account.html';
     }
 });

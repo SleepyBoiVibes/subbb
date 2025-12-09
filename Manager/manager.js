@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (navLogin) {
         const loggedIn = !!loggedInUser;
         navLogin.textContent = loggedIn ? "ACCOUNT" : "LOGIN / SIGNUP";
-        navLogin.href = loggedIn ? "../account/account.html" : "../Login-SignUp/login-signUp.html";
+        navLogin.href = loggedIn ? "/Final-Project/Account/account.html" : "/Final-Project/Login-SignUp/login-signUp.html";
     }
 
     if (!loggedInUser || loggedInUser.email.toLowerCase() !== "manager@lonestar.com") {
         if (window.location.pathname.toLowerCase().includes("manager.html")) {
             alert("You do not have permission to access this page.");
-            window.location.href = "../Login-SignUp/login-signUp.html";
+            window.location.href = "/Final-Project/Login-SignUp/login-signUp.html";
         }
     }
 
