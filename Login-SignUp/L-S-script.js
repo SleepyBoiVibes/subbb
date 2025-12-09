@@ -8,11 +8,13 @@ signInButton.addEventListener('click', () => container.classList.remove('right-p
 const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
 const users = [...storedUsers];
 
+// Add manager account if not present
 if(!users.find(u => u.email.toLowerCase() === "manager@lonestar.com")){
     users.push({ name: "manager", email:"manager@lonestar.com", password:"manager123" });
     localStorage.setItem('users', JSON.stringify(users));
 }
 
+// Message box for alerts
 const messageBox = document.createElement('div');
 messageBox.id = 'message';
 document.body.appendChild(messageBox);
@@ -21,12 +23,16 @@ function showMessage(text, duration=1000){
     messageBox.textContent = text;
     messageBox.classList.add('show');
     messageBox.classList.remove('hide');
-    setTimeout(() => { messageBox.classList.remove('show'); messageBox.classList.add('hide'); }, duration);
+    setTimeout(() => {
+        messageBox.classList.remove('show');
+        messageBox.classList.add('hide');
+    }, duration);
 }
 
 const signUpForm = document.getElementById('signupForm');
 const loginForm = document.getElementById('loginForm');
 
+// Handle sign-up
 signUpForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = signUpForm.querySelector('input[placeholder="Name"]').value.trim();
@@ -45,6 +51,7 @@ signUpForm.addEventListener('submit', (e) => {
     setTimeout(() => container.classList.remove('right-panel-active'), 1000);
 });
 
+// Handle login
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const email = loginForm.querySelector('input[placeholder="Email"]').value.trim();
@@ -52,6 +59,7 @@ loginForm.addEventListener('submit', (e) => {
     const user = users.find(u => u.email.toLowerCase() === email.toLowerCase());
 
     if(user){
+        // Manager password is case-insensitive
         if(user.email.toLowerCase() === "manager@lonestar.com" ? password.toLowerCase() === user.password.toLowerCase() : password === user.password){
             userLoggedIn(user);
         } else {
@@ -62,20 +70,29 @@ loginForm.addEventListener('submit', (e) => {
     }
 });
 
+// Login success
 function userLoggedIn(user){
     showMessage(`Welcome back, ${user.name}.`);
     loginForm.reset();
     localStorage.setItem('loggedInUser', JSON.stringify(user));
-    setTimeout(() => window.location.href = user.email.toLowerCase()==="manager@lonestar.com" ? '/Manager/manager.html' : '/account/account.html', 1000);
+    setTimeout(() => {
+        window.location.href = user.email.toLowerCase() === "manager@lonestar.com"
+            ? '../Manager/manager.html'
+            : '../account/account.html';
+    }, 1000);
 }
 
+// Redirect logged-in users from login page
 window.addEventListener('load', () => {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     const isLoginPage = window.location.pathname.toLowerCase().includes("login-signup.html");
 
     if(loggedInUser && isLoginPage){
-        window.location.href = loggedInUser.email.toLowerCase()==="manager@lonestar.com" ? '/Manager/manager.html' : '/account/account.html';
+        window.location.href = loggedInUser.email.toLowerCase() === "manager@lonestar.com"
+            ? '../Manager/manager.html'
+            : '../account/account.html';
     }
 
+    // Default to sign-up view
     container.classList.add('right-panel-active');
 });

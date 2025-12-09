@@ -1,32 +1,31 @@
 let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'))
 let userOrders = []; 
 
-
 function formatCurrency(amount) { 
     return `$${(amount).toFixed(2)}`; 
 }
 
-
+// Redirect to login if not logged in
 if (!loggedInUser) {
-    window.location.href = '/Login-SignUp/login-signUp.html'
+    window.location.href = '../Login-SignUp/login-signUp.html';
 } else {
-    document.getElementById('accountName').textContent = loggedInUser.name
-    document.getElementById('accountEmail').textContent = loggedInUser.email || ""
+    document.getElementById('accountName').textContent = loggedInUser.name;
+    document.getElementById('accountEmail').textContent = loggedInUser.email || "";
     if (loggedInUser.profilePic) {
-        document.getElementById('profileImage').src = loggedInUser.profilePic
+        document.getElementById('profileImage').src = loggedInUser.profilePic;
     }
     loadOrders(); 
 }
 
-
+// Sign out button
 document.getElementById('signOutBtn').addEventListener('click', () => {
-    localStorage.removeItem('loggedInUser')
-    window.location.href = '/Login-SignUp/login-signUp.html'
-})
+    localStorage.removeItem('loggedInUser');
+    window.location.href = '../Login-SignUp/login-signUp.html';
+});
 
-
+// Load past orders
 function loadOrders() {
-    const ordersList = document.getElementById("ordersList")
+    const ordersList = document.getElementById("ordersList");
     const allUserOrders = JSON.parse(localStorage.getItem('allUserOrders')) || {};
     
     if (!loggedInUser || !loggedInUser.email) {
@@ -65,8 +64,7 @@ function loadOrders() {
     });
 }
 
-
-// Re-order
+// Re-order functionality
 const ordersList = document.getElementById("ordersList");
 
 if (ordersList) {

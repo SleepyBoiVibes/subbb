@@ -4,51 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="./Menu.css">
 </head>
 <body>
 
-
 <header class="main-header">
 
-        
-        <div class="logo">
-            <img src="IMAGE/Logo.jpg" alt="Logo">
-        </div>
-
-   
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="Menu.html" class="active">MENU</a></li>
-                <li><a href="Reviews/reviews.html">REVIEW</a></li>
-                <li><a id="nav-login" href="Login-SignUp/login-signUp.html">LOGIN/SIGNUP</a></li>
-                <li><a href="/Manager/manager.html">MANAGER</a></li>
-
-            </ul>
-        </nav>
-
-       
-        <div class="order-actions"> 
-    
-    <a href="cart.html" class="cart-icon-link">
-        <span class="cart-count">0</span> <span class="cart-icon">🛍️</span>
-    </a>
-    
-    <div class="order-button">
-       <a href="cart.html" class="btn">ORDER NOW</a>
+    <div class="logo">
+        <img src="./IMAGE/Logo.jpg" alt="Logo">
     </div>
-</div>
-    </header>
 
+    <nav class="main-nav">
+        <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./Menu.html" class="active">MENU</a></li>
+            <li><a href="./Reviews/reviews.html">REVIEW</a></li>
+            <li><a id="nav-login" href="./Login-SignUp/login-signUp.html">LOGIN/SIGNUP</a></li>
+            <li><a href="./Manager/manager.html">MANAGER</a></li>
+        </ul>
+    </nav>
 
+    <div class="order-actions"> 
+        <a href="./cart.html" class="cart-icon-link">
+            <span class="cart-count">0</span> <span class="cart-icon">🛍️</span>
+        </a>
 
-    
-    <main class="menu-page">
-        <div class="menu-sidebar">
+        <div class="order-button">
+            <a href="./cart.html" class="btn">ORDER NOW</a>
+        </div>
+    </div>
+</header>
 
-            
-            <h2 class="sidebar-heading">Our Menu</h2>
+<main class="menu-page">
+    <div class="menu-sidebar">
+        <h2 class="sidebar-heading">Our Menu</h2>
         <ul class="menu-categories">
             <li><a href="#" class="category-link active" data-target="burgers-content">Burgers</a></li>
             <li><a href="#" class="category-link" data-target="appetizers-content">Appetizers</a></li>
@@ -56,40 +45,32 @@
             <li><a href="#" class="category-link" data-target="beverages-content">Beverages</a></li>
             <li><a href="#" class="category-link" data-target="desserts-content">Desserts</a></li>
         </ul>
-        </div>
+    </div>
 
-        
-        <section class="menu-content">
-
-            <!-- BURGERS -->
+    <section class="menu-content">
+        <!-- BURGERS -->
         <div id="burgers-content" class="menu-section active-section"></div>
 
-
         <!-- APPETIZERS -->
-    <div id="appetizers-content" class="menu-section hidden-section"></div>
- 
+        <div id="appetizers-content" class="menu-section hidden-section"></div>
 
+        <!-- STEAKS -->
+        <div id="texasbbq-content" class="menu-section hidden-section"></div>
 
-    <!-- Steaks -->
-     <div id="texasbbq-content" class="menu-section hidden-section"></div>
+        <!-- BEVERAGES -->
+        <div id="beverages-content" class="menu-section hidden-section"></div>
 
+        <!-- DESSERTS -->
+        <div id="desserts-content" class="menu-section hidden-section"></div>
+    </section>
+</main>
 
-    <div id="beverages-content" class="menu-section hidden-section"></div>
+<footer>
+    <p>© 2025 Lonestar Bites. All Rights Reserved.</p>
+</footer>
 
-    <!-- DESSERT -->
-     <div id="desserts-content" class="menu-section hidden-section"></div>
-
-        
-    
-
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Lonestar Bites. All Rights Reserved.</p>
-    </footer>
-
-     <script src="Menu.js"></script>
-     <script src="cart.js"></script>
-     <script src="Manager/manager.js"></script>
+<script src="Menu.js"></script>
+<script src="cart.js"></script>
+<script src="Manager/manager.js"></script>
 </body>
 </html>
